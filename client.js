@@ -192,6 +192,7 @@ btnUpgradePower.addEventListener("click", () => {
 	if(matter < pCost) return
 	matter -= pCost
 	pCost++
+	lvlPower *= 1.14
 	
 	displayPower.innerHTML = "🌩️ Upgrades raise multipliers by " + lvlPower
 	btnUpgradePower.innerHTML = "Upgrade power for 💠 " + pCost.toFixed(2)
