@@ -48,6 +48,8 @@ luckPenalty = 1 //Speed penalty from buying luck
 
 //Game loop (20 tps, dividing gain var by 20 to account for this)
 setInterval(() => {
+	if(document.visibilityState == "hidden") return
+	
 	//Calculate distance
 	distgain = baseSpeed*multSpeed
 	distgain *= matter||1
@@ -74,6 +76,8 @@ setInterval(() => {
 
 //Hole loop (1 tps)
 setInterval(() => {
+	if(document.visibilityState == "hidden") return
+	
 	if(lvlHole == 0) return
 	temp = lvlHole*Math.random()
 	temp *= 3
