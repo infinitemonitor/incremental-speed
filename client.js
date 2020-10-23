@@ -93,7 +93,7 @@ function clearValues() {
 	sCost = 10
 	bsCost = 25
 	lCost = 175
-	hCost = 500
+	hCost = 0.08
 	bal = 0 
 	storedBal = 0 
 	dist = 0
