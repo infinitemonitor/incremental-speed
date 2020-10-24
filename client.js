@@ -80,9 +80,7 @@ setInterval(() => {
 setInterval(() => {
 	if(document.visibilityState == "hidden") return
 	if(lvlHole == 0) return
-	temp = lvlHole*Math.random()
-	temp *= 3
-	holeBal += temp
+	holeBal += lvlHole
 	btnCollectHole.innerHTML = "Collect $" + holeBal.toFixed(2)
 },1000)
 
@@ -103,6 +101,9 @@ document.addEventListener("visibilitychange", () => {
 		dist += distgain
 		storedBal += distgain/1.4
 		tDist += distgain
+		
+		holeBal += lvlHole*((Date.now()-lastIdle)/1000)
+		btnCollectHole.innerHTML = "Collect $" + holeBal.toFixed(2)
 	}
 }) //Calculate how much distance wouldve been covered while the user was tabbed out
    //This basically makes the game able to run in the background
@@ -298,10 +299,10 @@ btnUpgradeLuck.addEventListener("click", () => {
 btnUpgradeHole.addEventListener("click", () => {
 	if(multSpeed-1 < hCost) return
 	multSpeed -= hCost
-	lvlHole++
+	lvlHole += lvlPower*28
 	hCost *= 1.28
 	
-	displayHole.innerHTML = "🕳️ Hole level " + lvlHole
+	displayHole.innerHTML = "🕳️ Hole level " + lvlHole.toFixed(2)
 	btnUpgradeHole.innerHTML = "Sacrifice " + hCost.toFixed(2) + "x SpMult"
 	displaySpeed.innerHTML = "▶️ Speed multiplier is " + multSpeed.toFixed(2) + "x, base speed is " + baseSpeed.toFixed(2)
 })
