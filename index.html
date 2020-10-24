@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>0 m - Incremental Speed</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
 	<style>
 		body {
 			margin: 0px;
@@ -13,6 +14,11 @@
 		}
 		h2 {
 			color: white;
+			margin: 0px;
+			padding: 6px;
+			padding-left: 0px;
+			background-color: #666666;
+			background-clip: padding-box;
 		}
 		h4 {
 			color: white;
@@ -26,8 +32,10 @@
 	</style>
 </head>
 <body>
-	<h2 id="display">0 m</h2>
-	<p id="psDisplay">1 m/s</p>
+	<h2 id="display">0 m<span style="font-size: 8px; margin-left: 8px;"><a style="color: white;" href="https://infinitemonitor.github.io/incremental-speed/changelog.html">version 1.1</a></span></h2>
+	<button id="btnSave">save</button>
+	<button id="btnClrSave">clear save</button>
+	<p id="psDisplay">0.1 m/tick</p>
 	<p id="totalDisplay">0 m travelled in total</p>
 	<p id="ascDisplay">You've gained 0 total 💠 Matter from ascending</p>
 	<p id="moneyDisplay">Your balance: $0</p>
@@ -46,12 +54,15 @@
 	<button id="btnCollectHole">Collect $0.00</button>
 	
 	<h4>Ascend</h4>
-	<p id="displayMatter">You have 0 💠 Matter (0x speed boost thanks to unspent matter)</p>
+	<p id="displayMatter">You have 0 💠 Matter</p>
 	<p id="displayMatterGain">If you ascend now, you will gain 0 💠 Matter</p>
 	<button id="btnAscend">Ascend!</button>
 	
 	<p id="displayPower">🌩️ Upgrades raise multipliers by 0.12x</p>
 	<button id="btnUpgradePower">Upgrade power for 💠 1.00</button>
+	
+	<p id="displaySolar">☀️ Solar panels granting +0% speed multiplier</p>
+	<button id="btnUpgradeSolar">Upgrade solar panels for 💠 1.00</button>
 	
 	<br><br>
 	<a href="https://github.com/infinitemonitor/incremental-speed" style="color: white;">GitHub</a>
