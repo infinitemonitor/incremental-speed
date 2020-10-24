@@ -203,6 +203,8 @@ function load() {
 	btnCollectHole.innerHTML = "Collect $" + holeBal.toFixed(2)
 	displayPower.innerHTML = "🌩️ Upgrades raise multipliers by " + lvlPower.toFixed(2) + "x"
 	btnUpgradePower.innerHTML = "Upgrade power for 💠 " + pCost.toFixed(2)
+	ascDisplay.innerHTML = "You've gained " + Math.round(asc) + " total 💠 Matter from ascending"
+	displayMatter.innerHTML = "You have " + matter.toFixed(2) + " 💠 Matter"
 }
 
 function clrsave() {
@@ -312,7 +314,7 @@ btnCollectHole.addEventListener("click", () => {
 	bal += holeBal
 	holeBal = 0
 	
-	displayHole.innerHTML = "🕳️ Hole level " + lvlHole
+	displayHole.innerHTML = "🕳️ Hole level " + lvlHole.toFixed(2)
 	moneyDisplay.innerHTML = "Your balance: $" + bal.toFixed(2)
 	btnCollectHole.innerHTML = "Collect $" + holeBal.toFixed(2)
 })
