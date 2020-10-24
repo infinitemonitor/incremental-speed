@@ -7,6 +7,4 @@ The game can be played at https://infinitemonitor.github.io/incremental-speed
 All feature requests & bug reports are welcome. I playtested quite a lot, but there's probably something that's broken `¯\_(ツ)_/¯`
 
 # To-do
-- Saving
-- Bypassing timer throttling
-- More progression?
+- More progression. Definitely more progression.
