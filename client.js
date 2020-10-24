@@ -69,7 +69,7 @@ setInterval(() => {
 	if(potentialMatter == Math.min()) potentialMatter = 0 //because division by 0 happens when asc is 0
 	
 	//Set displays
-	display.innerHTML = dist.toFixed(1) + ' m<span style="font-size: 8px; margin-left: 8px;"><a style="color: white;" href="https://infinitemonitor.github.io/incremental-speed/changelog.html">version 1.1</a></span>'
+	display.innerHTML = dist.toFixed(1) + ' m<span style="font-size: 8px; margin-left: 8px;">version 1.1</span>'
 	totalDisplay.innerHTML = tDist.toFixed(1) + " m travelled in total"
 	psDisplay.innerHTML = `${distgain.toFixed(1)} m/tick`
 	btnWithdraw.innerHTML = "Withdraw distance for $" + storedBal.toFixed(1)
